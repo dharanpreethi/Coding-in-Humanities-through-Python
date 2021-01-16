@@ -1,4 +1,3 @@
 The tentative course **Coding in Humanities through Python** is designed by Shanmugapriya T
 
-This tentative course is designed to accommodate students and scholars who have a little experience and/or do not have any previous experience in programming languages. This repository contains introduction to the course, reading materials, examples and instructions of basic Python coding, text analysis, web scraping, network analysis and mapping. The study and experimental materials are drawn from literature, history, social media and social sciences. 
-
+The course book ‘Coding in the Humanities through Python’ (CDP) is designed for students and scholars who do not have experience or any previous knowledge in the programming languages. It will introduce various quantitative methods and tools to the humanities students and scholars who has different backgrounds. These methods and tools will be applied to investigate cultural records of humanities disciplines: history, literature, social sciences and digital culture.
