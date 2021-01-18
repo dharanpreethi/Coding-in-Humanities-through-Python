@@ -41,3 +41,6 @@
     - file: web_scrapping/scrape_intro
       sections:
         - file: web_scrapping/scrap2
+    - file: Text_Analysis/Text_Analysis
+      sections:
+        - file: Text_Analysis/Frequent_word
