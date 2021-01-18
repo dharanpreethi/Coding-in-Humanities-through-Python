@@ -24,38 +24,6 @@ import re
 
 # Now we access the text (copy the text file and place it in your working directory)
 
-# In[127]:
-
-
-file = open ('Pamela.txt', encoding = "UTF-8") 
-
-
-# In[128]:
-
-
-text = file.read() #read the file
-
-
-# In[42]:
-
-
-text_clean1 = re.sub("[^a-zA-Z]+", " ", text)
-text_clean2 = text_clean1.lower()
-
-
-# In[43]:
-
-
-type(text_clean2)
-
-
-# In[129]:
-
-
-os.chdir ('C:\\Users\\Shanmugapriya\\CoursePythonprojects')
-
-
-# In[130]:
 
 
 file = open ('Pamela.txt', encoding = "UTF-8") 
