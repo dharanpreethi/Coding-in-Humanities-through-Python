@@ -5,17 +5,15 @@
 # 
 # ## Introduction
 # 
-# * Web scraping (web harvesting or web data extraction) 
+# * Web scraping is also known web harvesting and web data extraction 
 # 
-# * It is a computer software technique of extracting information from websites
-# 
-# ![](../images/web.jpg)
+# * It is a computational approach to retrive the information from a particular website
 # 
 # ## What will we learn?
 # 
-# * Manipulating URLs
-# * Downloading stuff from within python
-# * Automate collection through loops and functions
+# * Accessing and manipulating URLs
+# * Downloading data from websites to python interface to study the specific information
+# * Automatatically collecte through loops and functions
 # 
 
 # In[ ]:

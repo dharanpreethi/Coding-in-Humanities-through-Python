@@ -9,9 +9,7 @@
 # * Typically in html format, into structured data that can be stored
 # * And analyzed in a central local database or spreadsheat
 # 
-# ![](../images/web2.jpg)
-# 
-# here we consider the UK BBC News website i.e https://www.bbc.co.uk/search?q=covid+19&page=1 and searched about covid 19 in a search box present on the top of the page shown in the picture.
+# For this lesson, we will now access BBC News website i.e https://www.bbc.co.uk/search?q=covid+19&page=1 and search about covid-19, covid-19 second wave, and vaccination related keywords in a search box present on the top of the page shown in the picture.
 # 
 # ![](../images/web3.png)
 # 
@@ -65,7 +63,7 @@ print(key)
 # 
 # and the result stored in the csv file named <b>"search_res.csv" </b>
 
-# In[9]:
+# In[19]:
 
 
 for page in range(1,pagesToGet+1):
@@ -100,7 +98,7 @@ f.close()
 # 
 # here in a page there are 10 links are displayed. The title of the news related to keyword and published url and published date are stored in the csv file.
 
-# In[12]:
+# In[6]:
 
 
 data=pd.DataFrame(resultframe, columns=['Statement','Link','Date'])
@@ -111,7 +109,7 @@ print(data)
 # 
 # using the article package, we can display the various properties of news article like title of the news, summary of the news, meta description etc., we can take the link of the above result i.e data DataFrame.
 
-# In[13]:
+# In[7]:
 
 
 data['Link']
@@ -119,7 +117,7 @@ data['Link']
 
 # ### installing the package
 
-# In[15]:
+# In[14]:
 
 
 get_ipython().system('pip install newspaper3k')
@@ -127,13 +125,13 @@ get_ipython().system('pip install newspaper3k')
 
 # ### importing the package
 
-# In[16]:
+# In[15]:
 
 
 from newspaper import Article 
 
 
-# In[17]:
+# In[10]:
 
 
 url = data['Link'][1] #for example take a first result link
@@ -141,7 +139,7 @@ url = data['Link'][1] #for example take a first result link
 
 # ### apply parsing to know the properties of news article easily
 
-# In[19]:
+# In[11]:
 
 
 res_article = Article(url, language="en") # en for English 
@@ -152,7 +150,7 @@ res_article.nlp() #To perform natural language processing ie..nlp
 
 # ### displaying the title of the news article
 
-# In[23]:
+# In[12]:
 
 
 res_article.title
@@ -160,7 +158,7 @@ res_article.title
 
 # ### displaying the text of the news article
 
-# In[24]:
+# In[13]:
 
 
 res_article.text
