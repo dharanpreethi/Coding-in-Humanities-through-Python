@@ -73,39 +73,52 @@ analysis_part = text[extract1:extract2]
 print(analysis_part)
 
 
-# In[ ]:
+# In[141]:
 
 
-stopwords = set(line.strip() for line in open('stopwords_en.txt'))
+stopword_list = set(line.strip() for line in open('stopwords_en.txt'))
 
-wordcount = {}
+Frequent_word = {}
 
-for word in analysis_part.lower().split():
-    word = re.sub("[^a-zA-Z]+", " ", analysis_part)
-    #word = word.replace(".","")
-    #word = word.replace(",","")
-    #word = word.replace(":","")
-    #word = word.replace("\"","")
-    #word = word.replace("!","")
-    #word = word.replace("â€œ","")
-    #word = word.replace("â€˜","")
-    #word = word.replace("*","")
-    if word not in stopwords:
-        if word not in wordcount:
-            wordcount[word] = 1
+for words in analysis_part.lower().split():
+    words = words.replace(".","")
+    words = words.replace(",","")
+    words = words.replace(":","")
+    words = words.replace("\"","")
+    words = words.replace("!","")
+    words = words.replace("â€œ","")
+    words = words.replace("â€˜","")
+    words = words.replace("*","")
+    if words not in stopword_list:
+        if words not in Frequent_word:
+            Frequent_word[words] = 1
         else:
-            wordcount[word] += 1
+            Frequent_word[words] += 1
 
 
-# In[125]:
+# In[144]:
 
 
 import collections
-word_counter = collections.Counter(wordcount)
-n_print = int(input("How many most common words to print: "))
-for count in word_counter.most_common(n_print):
+top_words = collections.Counter(Frequent_word)
+
+
+no_top_words = int(input("How many the most frequent words to print: "))
+for count in top_words.most_common(no_top_words):
     print(count)
-lst = word_counter.most_common(n_print)
-df = pd.DataFrame(lst, columns = ['Word', 'Count'])
+lsts = top_words.most_common(no_top_words)
+df = pd.DataFrame(lsts, columns = ['Word', 'Count'])
 df.plot.bar(x='Word',y='Count')
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
