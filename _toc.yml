@@ -44,3 +44,4 @@
     - file: Text_Analysis/Text_Analysis
       sections:
         - file: Text_Analysis/Fre_word
+        - file: Text_Analysis/try
