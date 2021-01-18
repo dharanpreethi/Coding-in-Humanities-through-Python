@@ -43,4 +43,4 @@
         - file: web_scrapping/scrap2
     - file: Text_Analysis/Text_Analysis
       sections:
-        - file: Text_Analysis/Frequent_word
+        - file: Text_Analysis/Fre_word
