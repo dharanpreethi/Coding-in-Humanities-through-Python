@@ -44,4 +44,5 @@
     - file: Text_Analysis/Text_Analysis
       sections:
         - file: Text_Analysis/Fre_word
+        title: Frequent word analysis
         - file: Text_Analysis/try
